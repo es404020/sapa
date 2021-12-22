@@ -171,7 +171,7 @@ export default function Home() {
 
 
 
-
+{/* 
         <Grid templateColumns='repeat(3, 1fr)' gap={6} mb={5}>
 <Flex alignItems="center" justifyContent="space-between"  w='90%' h='200px' flexDirection="column" >
 
@@ -190,7 +190,7 @@ export default function Home() {
   </Flex>
   <Box w='100%' h='200px' bg='blue.500' />
   <Box w='100%' h='200px' bg='blue.500' />
-</Grid>
+</Grid> */}
 
 
 
