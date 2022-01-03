@@ -22,8 +22,9 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
-import {FaNetworkWired} from 'react-icons/fa'
-
+import { FaFileContract } from 'react-icons/fa'
+import { MdOutlineHealthAndSafety } from 'react-icons/md';
+import { BiWallet,BiGasPump } from 'react-icons/bi';
 
 import { CgDarkMode } from "react-icons/cg";
 import { HamburgerIcon } from "@chakra-ui/icons";
@@ -53,7 +54,7 @@ export default function Home() {
         <IconButton position="fixed" bottom="5px" right="5px" aria-label="dark mode" boxSize={10} onClick={toggleColorMode} icon={<CgDarkMode />} />
         <Flex flexDirection={{ base: 'row', md: 'row' }} width="100%" py={4} px={{ base: '5px', md: null }} justifyContent="space-between" wrap="wrap" bgGradient={{ base: isOpen ? "linear(to-l, #7072CD,   #7928CA)" : null, md: null }} >
           <Flex align="center" mr={5} width={{ base: "auto", md: "50%" }}>
-            <Heading as="h4"  bgClip="text" size="lg" letterSpacing={"tighter"} bgGradient='linear(to-l, #FF0080, #7928CA)'>
+            <Heading as="h4" bgClip="text" size="lg" letterSpacing={"tighter"} bgGradient='linear(to-l, #FF0080, #7928CA)'>
               {/* <Image
                 //  boxSize="10px"
                 // objectFit="cover"
@@ -74,18 +75,18 @@ export default function Home() {
             width={{ base: "full", md: "30%" }}
             alignItems="center"
             flexGrow={1}
-            justifyContent={{ base: "start", md: "space-between" }}
+            justifyContent={{ base: "start", md: "end" }}
             mt={{ base: 4, md: 0 }}
             color={{ base: isOpen ? 'white' : null, md: null }}
           >
-            <Text>About</Text>
+            {/* <Text>About</Text>
             <Text>Service</Text>
             <Text>Product</Text>
-            <Text>Contact</Text>
+            <Text>Contact</Text> */}
             <Flex alignItems="center" justifyContent="space-between">
-              <Text mr={2} onClick={() => router.push('/login')}>Login</Text>
+              {/* <Text mr={2} onClick={() => router.push('/login')}>Login</Text> */}
               <Button borderRadius="20px" size="md" color={{ base: 'black', md: 'white' }} bg={{ base: 'white', md: " #7928CA" }}>
-                Sign In
+                Connect
               </Button>
             </Flex>
           </Stack>
@@ -104,13 +105,13 @@ export default function Home() {
             flexDirection="column"
           >
             <Box p={{ base: "12px", md: null }} textAlign="center">
-              <Heading display="inline" bgClip="text" ml={1} fontSize={{ base: "2xl", md: '4xl' }}  bgGradient='linear(to-l, #7928CA, #FF0080)' fontWeight="extrabold">
-              ₿ Pension
+              <Heading display="inline" bgClip="text" ml={1} fontSize={{ base: "2xl", md: '4xl' }} bgGradient='linear(to-l, #7928CA, #FF0080)' fontWeight="extrabold">
+                ₿ Pension
               </Heading>
-              <Heading fontSize={{ base: "4xl", md: '6xl' }} fontWeight="extrabold">Decentralized way of managing  pension on 
-              <Heading display="inline" bgClip="text" ml={1} fontSize={{ base: "4xl", md: '6xl' }}  bgGradient='linear(to-l, #7928CA, #FF0080)' fontWeight="extrabold">
-               Blockchain
-              </Heading>
+              <Heading fontSize={{ base: "4xl", md: '6xl' }} fontWeight="extrabold">Decentralized way of managing  pension on
+                <Heading display="inline" bgClip="text" ml={1} fontSize={{ base: "4xl", md: '6xl' }} bgGradient='linear(to-l, #7928CA, #FF0080)' fontWeight="extrabold">
+                  Blockchain
+                </Heading>
 
               </Heading>
 
@@ -121,10 +122,10 @@ export default function Home() {
                 </Text>
               </Flex>
 
-              <ButtonGroup spacing="6" mt={5} size="md" >
-                <Button borderRadius="20px" color="white" bg=" #7928CA">
+              <ButtonGroup spacing="6" my={5} size="md" >
+                {/* <Button borderRadius="20px" color="white" bg=" #7928CA">
                   Get Started
-                </Button>
+                </Button> */}
                 <Button borderRadius="20px" variant="outline">
                   Learn more
                 </Button>
@@ -160,37 +161,93 @@ export default function Home() {
 
 
         </Box>
-        <Flex alignItems="center" mb={{ base: "5", md: "20" }} justifyContent="center">
+        <Flex alignItems="center" mb={{ base: "5", md: "10" }} justifyContent="center">
           <Heading fontSize={{ base: "x-large", md: 'xx-large' }} fontWeight="extrabold" mr={2}>
             What you
           </Heading>
-          <Heading bgClip="text" fontSize={{ base: "x-large", md: 'xx-large' }} fontWeight="extrabold"  bgGradient='linear(to-l, #7928CA, #FF0080)'>
+          <Heading bgClip="text" fontSize={{ base: "x-large", md: 'xx-large' }} fontWeight="extrabold" bgGradient='linear(to-l, #7928CA, #FF0080)'>
             can do ?
           </Heading>
         </Flex>
 
 
 
-{/* 
-        <Grid templateColumns='repeat(3, 1fr)' gap={6} mb={5}>
-<Flex alignItems="center" justifyContent="space-between"  w='90%' h='200px' flexDirection="column" >
+
+        <Grid templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }} gap={6} mb={3}>
+          <Flex alignItems="start" justifyContent="center" w='100%' h='200px' flexDirection="column" boxShadow="md" p={5}>
 
 
-  <Icon as={FaNetworkWired} w={20} h={20}  />
+            <svg>
+              <linearGradient id="blue-gradient" x1="100%" y1="100%" x2="0%" y2="0%">
+                <stop stopColor="#7928CA" offset="0%" />
+                <stop stopColor="#FF0080" offset="100%" />
+              </linearGradient>
+
+            </svg>
+            <Icon mb={3} as={MdOutlineHealthAndSafety} w={20} h={20} style={{ fill: "url(#blue-gradient)" }} />
 
 
-  <Text fontWeight="extrabold" fontSize="lg">ETH Compatibility</Text>
-
-  <Text fontSize="smaller"  color="#74788D" textAlign="center">
-
-  Industry dominance, established tech stack, tools, languages, standards, enterprise adoption
-  </Text>
 
 
-  </Flex>
-  <Box w='100%' h='200px' bg='blue.500' />
-  <Box w='100%' h='200px' bg='blue.500' />
-</Grid> */}
+            <Text fontWeight="bold" fontSize="md">Safe {'&'} Secured</Text>
+
+            <Text fontSize="smaller" color="#74788D" textAlign="start">
+
+              Access Compound directly from the security of your Ledger hardware wallet.
+            </Text>
+
+
+          </Flex>
+          <Flex alignItems="start" justifyContent="center" w='100%' h='200px' flexDirection="column" boxShadow="md" p={5}>
+
+
+
+            <Icon mb={3} as={BiWallet} w={20} h={20} style={{ fill: "url(#blue-gradient)" }} />
+
+
+
+            <Text fontWeight="bold" fontSize="md">
+              Wallet Platform
+            </Text>
+
+            <Text fontSize="smaller" color="#74788D" textAlign="start">
+
+              Balance security and accessibility with BitGo{'’'}s hot, warm, and cold wallet solutions.
+            </Text>
+
+
+          </Flex>
+          <Flex alignItems="start" justifyContent="center" w='100%' h='200px' flexDirection="column" boxShadow="md" p={5}>
+
+
+            <Icon mb={3} as={FaFileContract} w={20} h={20} style={{ fill: "url(#blue-gradient)" }} />
+
+
+            <Text fontWeight="bold" fontSize="md">Settlement</Text>
+
+            <Text fontSize="smaller" color="#74788D" textAlign="start">
+
+              A more efficient and secure way to settle digital assets.
+            </Text>
+
+
+          </Flex>
+          <Flex alignItems="start" justifyContent="center" w='100%' h='200px' flexDirection="column" boxShadow="md" p={5}>
+
+
+            <Icon mb={3} as={BiGasPump} w={20} h={20} style={{ fill: "url(#blue-gradient)" }} />
+
+
+            <Text fontWeight="bold" fontSize="md">Polygon</Text>
+
+            <Text fontSize="smaller" color="#74788D" textAlign="start">
+
+              Few gas fee required for transcation.
+            </Text>
+
+
+          </Flex>
+        </Grid>
 
 
 
