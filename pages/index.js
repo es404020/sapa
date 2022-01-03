@@ -25,7 +25,7 @@ import React, { useEffect } from "react";
 import { FaFileContract } from 'react-icons/fa'
 import { MdOutlineHealthAndSafety } from 'react-icons/md';
 import { BiWallet,BiGasPump } from 'react-icons/bi';
-
+import {SiPolymerproject} from 'react-icons/si';
 import { CgDarkMode } from "react-icons/cg";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
@@ -235,7 +235,7 @@ export default function Home() {
           <Flex alignItems="start" justifyContent="center" w='100%' h='200px' flexDirection="column" boxShadow="md" p={5}>
 
 
-            <Icon mb={3} as={BiGasPump} w={20} h={20} style={{ fill: "url(#blue-gradient)" }} />
+            <Icon mb={3} as={SiPolymerproject} w={20} h={20} style={{ fill: "url(#blue-gradient)" }} transform=" rotate(90deg)" />
 
 
             <Text fontWeight="bold" fontSize="md">Polygon</Text>
