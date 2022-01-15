@@ -1,15 +1,18 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
-import theme from '../themes/themes';
+import theme from "../themes/themes";
 
 function MyApp({ Component, pageProps }) {
-  return(
+  const Layout = Component.Layout || EmptyLayout;
+  return (
     <ChakraProvider theme={theme}>
-
-      <Component {...pageProps} />
-    
-  </ChakraProvider>
-  )
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ChakraProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
+
+const EmptyLayout = ({ children }) => <>{children}</>;

@@ -171,11 +171,11 @@ export default function Home() {
               </Flex>
 
               <ButtonGroup spacing="6" my={5} size="md">
-                {/* <Button borderRadius="20px" color="white" bg=" #7928CA">
-                  Get Started
-                </Button> */}
+                <Button borderRadius="20px" color="white" bg=" #7928CA">
+               Company
+                </Button>
                 <Button borderRadius="20px" variant="outline">
-                  Learn more
+              Personal
                 </Button>
               </ButtonGroup>
             </Box>
