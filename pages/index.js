@@ -28,7 +28,7 @@ import { BiWallet, BiGasPump } from "react-icons/bi";
 import { SiPolymerproject } from "react-icons/si";
 import { CgDarkMode } from "react-icons/cg";
 import { HamburgerIcon } from "@chakra-ui/icons";
-
+import { Logo } from '@components/ui/common';
 import { useRouter } from "next/router";
 
 export default function Home() {
@@ -82,7 +82,7 @@ export default function Home() {
                 src="logo.png"
                 alt=""
               /> */}
-              Defi Pension
+           <Logo />
             </Heading>
           </Flex>
           <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>

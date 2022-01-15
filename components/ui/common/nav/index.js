@@ -43,13 +43,13 @@ export default function index() {
 
 <Logo />
 
-<Flex mt={10} height="50%" width="100%" flexDirection="column" justifyContent="space-evenly" alignItems="start" >
+<Flex mt={5} height="60%" width="100%" flexDirection="column" justifyContent="space-evenly" alignItems="start" >
 <NavBox image="home.svg" text="Home" />
 <NavBox image="chart.svg" text="Chart" />
 
-<NavBox image="wallet.svg" text="Wallet" />
+<NavBox image="wallet.svg" text="Cypto Wallet" />
 <NavBox image="contact.svg" text="Contact" />
-<NavBox image="exchange.svg" text="Exchange" />
+<NavBox image="exchange.svg" text="Currency" />
 <NavBox image="billing.svg" text="Billing" />
 </Flex>
 
