@@ -1,16 +1,28 @@
 import React from 'react'
 import { Web3Provider,useWeb3 } from "@components/provider"
 import {Headers,NavBar} from '@components/ui/common'
-import { Image,Box } from '@chakra-ui/react'
+import { CgDarkMode } from "react-icons/cg";
+import { Image,Box,Flex,IconButton,  useColorMode, } from '@chakra-ui/react'
 export default function BaseLayout( {children}) {
-    console.log('hhe')
+    const { colorMode, toggleColorMode } = useColorMode();
     return (
         <Web3Provider>
             <NavBar />
 
-            <Box position="relative" bg="#f3f7ff" height="100vh"  marginLeft="15%" top="0px">
+            <Flex flexDirection="column"   height="100vh"  marginLeft="15%" top="0px">
+            <Headers toggle={
+ <IconButton
+
+ aria-label="dark mode"
+ boxSize={10}
+ onClick={toggleColorMode}
+ icon={<CgDarkMode />}
+/>
+            }/>
             {children}
-            </Box>
+
+           
+            </Flex>
            
          
             </Web3Provider>

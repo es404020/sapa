@@ -36,10 +36,11 @@ import {
 
 
 
-export default function index() {
+export default function index({toggle}) {
     return (
-        <div>
-           header 
-        </div>
+       <Flex p={3} width="100%" alignItems="center" height="10%" justifyContent="space-between" boxShadow="md" >
+            <Text>Block</Text>
+            {toggle}
+       </Flex>
     )
 }
